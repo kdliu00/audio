@@ -8,6 +8,8 @@ public class SpectrumAnalyzer : MonoBehaviour
     AudioSource audioSource;
     public static float[] samples = new float[512];
 
+    public FFTWindow fFTWindow;
+
     public static float[] freqBand = new float[8];
 
     public static float[] freqBandHighest = new float[8];
@@ -52,7 +54,7 @@ public class SpectrumAnalyzer : MonoBehaviour
     }
 
     void GetSpectrumAudioSource() {
-        audioSource.GetSpectrumData(samples, 0, FFTWindow.Blackman);
+        audioSource.GetSpectrumData(samples, 0, fFTWindow);
     }
 
     // Update is called once per frame
