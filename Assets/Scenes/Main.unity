@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311912, g: 0.3807398, b: 0.3587271, a: 1}
+  m_IndirectSpecularColor: {r: 0.3731193, g: 0.38073996, b: 0.3587269, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -122,6 +122,10 @@ PrefabInstance:
     - target: {fileID: 747783518, guid: 883aef3dbd2ac4ccc81b435cff954e42, type: 3}
       propertyPath: m_Name
       value: Cube (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 747783518, guid: 883aef3dbd2ac4ccc81b435cff954e42, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 747783520, guid: 883aef3dbd2ac4ccc81b435cff954e42, type: 3}
       propertyPath: m_LocalPosition.x
@@ -224,7 +228,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 69
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -249,13 +253,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 534669902}
-  m_LocalRotation: {x: 0.12278779, y: -0.6963643, z: 0.12278779, w: 0.6963643}
-  m_LocalPosition: {x: 210, y: 70, z: 0}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 80, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 20, y: -90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!114 &534669906
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -280,6 +284,10 @@ PrefabInstance:
     - target: {fileID: 747783518, guid: 883aef3dbd2ac4ccc81b435cff954e42, type: 3}
       propertyPath: m_Name
       value: Cube (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 747783518, guid: 883aef3dbd2ac4ccc81b435cff954e42, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 747783520, guid: 883aef3dbd2ac4ccc81b435cff954e42, type: 3}
       propertyPath: m_LocalPosition.x
@@ -346,6 +354,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Floor
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: efe4339c844950441b5e7fcbdd5d48e2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: efe4339c844950441b5e7fcbdd5d48e2, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0
@@ -402,14 +414,14 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: efe4339c844950441b5e7fcbdd5d48e2, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e633a20421c47426aa04444234225b69, type: 2}
     - target: {fileID: 9500000, guid: efe4339c844950441b5e7fcbdd5d48e2, type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 2300000, guid: efe4339c844950441b5e7fcbdd5d48e2, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: a516246d7f1df0941aff9c8a3ee0b620, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: efe4339c844950441b5e7fcbdd5d48e2, type: 3}
 --- !u!1001 &901612494
@@ -422,6 +434,10 @@ PrefabInstance:
     - target: {fileID: 747783518, guid: 883aef3dbd2ac4ccc81b435cff954e42, type: 3}
       propertyPath: m_Name
       value: Cube (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 747783518, guid: 883aef3dbd2ac4ccc81b435cff954e42, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 747783520, guid: 883aef3dbd2ac4ccc81b435cff954e42, type: 3}
       propertyPath: m_LocalPosition.x
@@ -484,6 +500,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 747783518, guid: 883aef3dbd2ac4ccc81b435cff954e42, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 747783520, guid: 883aef3dbd2ac4ccc81b435cff954e42, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -544,6 +564,10 @@ PrefabInstance:
     - target: {fileID: 747783518, guid: 883aef3dbd2ac4ccc81b435cff954e42, type: 3}
       propertyPath: m_Name
       value: Cube (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 747783518, guid: 883aef3dbd2ac4ccc81b435cff954e42, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 747783520, guid: 883aef3dbd2ac4ccc81b435cff954e42, type: 3}
       propertyPath: m_LocalPosition.x
@@ -606,6 +630,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube
       objectReference: {fileID: 0}
+    - target: {fileID: 747783518, guid: 883aef3dbd2ac4ccc81b435cff954e42, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 747783520, guid: 883aef3dbd2ac4ccc81b435cff954e42, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -665,7 +693,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1826872354}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7c35bbfd2623eab4e80ede4afdb0f9c0, type: 3}
   m_Name: 
@@ -730,6 +758,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 747783518, guid: 883aef3dbd2ac4ccc81b435cff954e42, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 747783520, guid: 883aef3dbd2ac4ccc81b435cff954e42, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -790,6 +822,10 @@ PrefabInstance:
     - target: {fileID: 747783518, guid: 883aef3dbd2ac4ccc81b435cff954e42, type: 3}
       propertyPath: m_Name
       value: Cube (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 747783518, guid: 883aef3dbd2ac4ccc81b435cff954e42, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 747783520, guid: 883aef3dbd2ac4ccc81b435cff954e42, type: 3}
       propertyPath: m_LocalPosition.x
@@ -869,7 +905,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: e79d1527bf9a14244888dde6bf84b9e2, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 0c4bc5798c20349538a5a464cfe7f240, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1

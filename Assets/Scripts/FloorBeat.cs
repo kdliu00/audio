@@ -87,7 +87,7 @@ public class FloorBeat : MonoBehaviour
         // Change color
         Color newColor = transform.GetComponent<MeshRenderer>().material.GetColor("_Color");
         newColor = Color.Lerp(newColor, (loColor * loVolume + hiColor * hiVolume) / 2, Time.deltaTime / 0.1f);
-        transform.GetComponent<MeshRenderer>().material.SetColor("_Color", newColor);
+        // transform.GetComponent<MeshRenderer>().material.SetColor("_Color", newColor);
         // transform.GetComponent<MeshRenderer>().material.SetColor("_EmissionColor", newColor);
         
         float t = Time.deltaTime / decayTime;

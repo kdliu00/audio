@@ -17,6 +17,6 @@ public class NiceCamera : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.RotateAround(target.transform.position, Vector3.up, rotationSpeed * Time.deltaTime);
+        //transform.RotateAround(target.transform.position, Vector3.up, rotationSpeed * Time.deltaTime);
     }
 }
