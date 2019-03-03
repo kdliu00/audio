@@ -16,7 +16,7 @@ public class Cube : MonoBehaviour
     {
         scaleMultiplier = 10;
         startScale = 10;
-        target = new Vector3(1,1,1);
+        target = new Vector3(1, 1, 1);
     }
 
     void Update () {
@@ -31,9 +31,11 @@ public class Cube : MonoBehaviour
                 SpectrumAnalyzer.freqBand[band] * scaleMultiplier / 3f, startScale);
         }
         transform.localScale = Vector3.Lerp(transform.localScale, target, Time.deltaTime / 0.1f);
+        // Color change
         float colorMult = transform.localScale.y / 20f;
         Color col = new Color(0, colorMult, Mathf.Sqrt(colorMult));
         transform.GetComponentInChildren<MeshRenderer>().material.color = col;
         transform.GetComponentInChildren<Light>().color = col;
+        transform.GetComponentInChildren<Light>().intensity = 0;
 	}
 }

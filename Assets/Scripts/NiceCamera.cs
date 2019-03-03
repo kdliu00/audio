@@ -6,6 +6,7 @@ public class NiceCamera : MonoBehaviour
 {
 
     public Transform target;
+    public float rotationSpeed = 15;
 
     // Start is called before the first frame update
     void Start()
@@ -16,6 +17,6 @@ public class NiceCamera : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.RotateAround(target.transform.position, Vector3.up, 34.5f * Time.deltaTime);
+        transform.RotateAround(target.transform.position, Vector3.up, rotationSpeed * Time.deltaTime);
     }
 }
