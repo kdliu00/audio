@@ -1,3 +1,2 @@
-auvis
-
-An audio visualization project made in Unity
+# auvis
+Audio visualizer made in Unity.
