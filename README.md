@@ -1,2 +1,2 @@
-# auvis
+# Custom Audio Visualizer
 Made with Unity.
