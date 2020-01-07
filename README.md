@@ -1,2 +1,2 @@
-# Custom Audio Visualizer
+# 3D Audio Visualizer
 Made with Unity.
