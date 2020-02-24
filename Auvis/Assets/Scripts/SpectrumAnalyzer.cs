@@ -92,30 +92,30 @@ public class SpectrumAnalyzer : MonoBehaviour
         //     energy += waveform[i] * waveform[i];
         // }
         
-        float volume = 0;
-        for (int i = 0; i < 512; i++)
-        {
-            samples[i] = Mathf.Pow(256 + i, 1.1f) / 1492 * samples[i];
-            volume += samples[i] * samples[i];
-        }
-        volume = Mathf.Sqrt(volume);
+        // float volume = 0;
+        // for (int i = 0; i < 512; i++)
+        // {
+        //     samples[i] = Mathf.Pow(256 + i, 1.1f) / 1492 * samples[i];
+        //     volume += samples[i] * samples[i];
+        // }
+        // volume = Mathf.Sqrt(volume);
 
-        loudness[loudnessIndex] = volume;
-        loudnessIndex = (loudnessIndex + 1) % loudness.Length;
+        // loudness[loudnessIndex] = volume;
+        // loudnessIndex = (loudnessIndex + 1) % loudness.Length;
 
-        volume = Mathf.Max(loudness);
+        // volume = Mathf.Max(loudness);
 
-        float t = Time.deltaTime / 10;
-        for (int i = 0; i < 512; i++)
-        {
-            if (samples[i] > volume)
-            {
-                samples[i] = 1;
-            } else if (volume > 0)
-            {
-                samples[i] = Mathf.Max(0, 3 + Mathf.Log10(samples[i] / volume)) / 3;
-            }
-        }
+        // float t = Time.deltaTime / 10;
+        // for (int i = 0; i < 512; i++)
+        // {
+        //     if (samples[i] > volume)
+        //     {
+        //         samples[i] = 1;
+        //     } else if (volume > 0)
+        //     {
+        //         samples[i] = Mathf.Max(0, 3 + Mathf.Log10(samples[i] / volume)) / 3;
+        //     }
+        // }
 
         GaussianBlur(samples, 5);
     }
@@ -124,8 +124,8 @@ public class SpectrumAnalyzer : MonoBehaviour
     void Update()
     {
         GetSpectrumAudioSource();
-        MakeFrequencyBands();
-        CreateAudioBands();
+        // MakeFrequencyBands();
+        // CreateAudioBands();
     }
 
     void GaussianBlur(float[] sample, int width = 3)

@@ -920,8 +920,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WasapiAudioSource: {fileID: 2087925721}
-  Profile: {fileID: 11400000, guid: 1a3c22745757bd34e988d3f0ace67a0a, type: 2}
-  Strategy: 2
+  Profile: {fileID: 11400000, guid: d68f5b7faf2f2184dbe22d3d5e5f60d7, type: 2}
+  Strategy: 0
   Smoothed: 0
 --- !u!114 &2087925719
 MonoBehaviour:
@@ -965,7 +965,7 @@ MonoBehaviour:
   CaptureType: 0
   SpectrumSize: 512
   ScalingStrategy: 1
-  MinFrequency: 60
+  MinFrequency: 86
   MaxFrequency: 22050
 --- !u!82 &2087925722
 AudioSource:
@@ -974,7 +974,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2087925717}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: f3491550f87631f4fb08343efa71da88, type: 3}

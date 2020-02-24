@@ -5,6 +5,7 @@ using CSCore.CoreAudioAPI;
 using CSCore.DSP;
 using CSCore.SoundIn;
 using CSCore.Streams;
+using UnityEngine;
 
 namespace Assets.WasapiAudio.Scripts.Wasapi
 {
