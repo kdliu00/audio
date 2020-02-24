@@ -1,2 +1,13 @@
 Base path: 'C:/Program Files/Unity/Hub/Editor/2019.3.0f6/Editor/Data', plugins path 'C:/Program Files/Unity/Hub/Editor/2019.3.0f6/Editor/Data/PlaybackEngines'
 Cmd: initializeCompiler
+Cmd: preprocessCompute
+  insize=6322 outsize=6324 ok=1
+Cmd: preprocessCompute
+  insize=3622 outsize=3624 ok=1
+Cmd: preprocess
+  insize=12433 outsize=438 ok=1
+Cmd: preprocessCompute
+  insize=1625 outsize=1627 ok=1
+Cmd: compileComputeKernel
+  error: 2 plat 4 at Sample.vfx(6): failed to open source file: 'Packages/com.unity.visualeffectgraph/Shaders/RenderPipeline/HDRP/VFXDefines.hlsl'
+  api=4 insize=1627 outsize=0 ok=0

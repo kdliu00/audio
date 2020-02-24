@@ -5,13 +5,15 @@ using UnityEngine;
 public class SpectrumAnalyzer : MonoBehaviour
 {
     AudioSource audioSource;
+    public bool coolbeans;
     public static float[] waveform = new float[1024];
     public static float[] samples = new float[512];
+    // public static Buffer samples = new Buffer(512);
 
     private static int loudnessIndex = 0;
     private static float[] loudness = new float[86];
 
-    public FFTWindow fFTWindow;
+    // public FFTWindow fFTWindow;
 
     public static float energy = 0;
     public static float[] freqBand = new float[8];
@@ -55,23 +57,41 @@ public class SpectrumAnalyzer : MonoBehaviour
 
     void Start () {
         audioSource = GetComponent<AudioSource>();
+
+        if (coolbeans) {
+            GetComponent<BarSpectrum>().enabled = false;
+        }
     }
 
-    void GetSpectrumAudioSource() {
-        audioSource.GetSpectrumData(samples, 0, FFTWindow.BlackmanHarris);
+    // public void Add(float left, float right) {
+    //     // Debug.Log();
+    //     float avg = (left + right) / 2;
+    //     samples.Add(avg);
+    //     Debug.Log(avg);
+    //     int sampleLength = samples.Count;
+    //     if (sampleLength == 512) {
+    //         GetSpectrumAudioSource();
+    //     }
+    // }
 
-        audioSource.GetOutputData(waveform, 0);
-        energy = 0;
-        for (int i = 0; i < 1024; i++)
-        {
-            energy += waveform[i] * waveform[i];
+    void GetSpectrumAudioSource() {
+        
+        if (coolbeans) {
+            audioSource.GetSpectrumData(samples, 0, FFTWindow.BlackmanHarris);
         }
-        audioSource.GetOutputData(waveform, 1);
-        for (int i = 0; i < 1024; i++)
-        {
-            energy += waveform[i] * waveform[i];
-        }
-        //
+
+        // audioSource.GetOutputData(waveform, 0);
+        // energy = 0;
+        // for (int i = 0; i < 1024; i++)
+        // {
+        //     energy += waveform[i] * waveform[i];
+        // }
+        // // audioSource.GetOutputData(waveform, 1);
+        // for (int i = 0; i < 1024; i++)
+        // {
+        //     energy += waveform[i] * waveform[i];
+        // }
+        
         float volume = 0;
         for (int i = 0; i < 512; i++)
         {
@@ -110,7 +130,8 @@ public class SpectrumAnalyzer : MonoBehaviour
 
     void GaussianBlur(float[] sample, int width = 3)
     {
-        float[] copy = new float[sample.Length + width - 1];
+        int sampleLength = sample.Length;
+        float[] copy = new float[sampleLength + width - 1];
         float[] filter = new float[width];
         float total = 0;
         for (int i = 0; i < width; i++)
@@ -126,13 +147,13 @@ public class SpectrumAnalyzer : MonoBehaviour
         for (int i = 0; i < width / 2; i++)
         {
             copy[i] = sample[0];
-            copy[copy.Length - i - 1] = sample[sample.Length - 1];
+            copy[copy.Length - i - 1] = sample[sampleLength - 1];
         }
-        for (int i = 0; i < sample.Length; i++)
+        for (int i = 0; i < sampleLength; i++)
         {
             copy[i + width / 2] = sample[i];
         }
-        for (int i = 0; i < sample.Length; i++)
+        for (int i = 0; i < sampleLength; i++)
         {
             float result = 0;
             for (int j = 0; j < width; j++)
