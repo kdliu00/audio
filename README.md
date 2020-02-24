@@ -1,2 +1,2 @@
-# 3D Audio Visualizer
+# Auvis
 Made with Unity
