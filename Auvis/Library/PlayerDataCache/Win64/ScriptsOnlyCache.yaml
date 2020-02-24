@@ -610,4 +610,4 @@ ScriptsOnlyBuild:
   platform: 19
   scenePathNames:
   - Assets/Scenes/Main.unity
-  playerPath: C:/Users/crazy/Downloads/Auvis/Auvis.exe
+  playerPath: C:/Users/crazy/Documents/Auvis/Auvis.exe
