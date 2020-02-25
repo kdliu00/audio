@@ -965,7 +965,7 @@ MonoBehaviour:
   CaptureType: 0
   SpectrumSize: 512
   ScalingStrategy: 1
-  MinFrequency: 86
+  MinFrequency: 43
   MaxFrequency: 22050
 --- !u!82 &2087925722
 AudioSource:
