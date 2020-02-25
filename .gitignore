@@ -1,16 +1,6 @@
+/*
+/*/
 
-Temp/ProcessJobs/
-
-*.info
-
-Library/
-
-\.vscode/settings\.json
-
-*.sln
-
-Auvis/Library/
-
-Auvis/Temp/
-
-*.csproj
+!.gitignore
+!/Assets/
+!/ProjectSettings/
