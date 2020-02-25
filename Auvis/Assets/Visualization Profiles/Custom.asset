@@ -37,6 +37,6 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   AudioSmoothingIterations: 5
-  MinMaxThreshold: 1
+  MinMaxThreshold: 1.2
   MinScale: 1.5
   MaxScale: 0.5

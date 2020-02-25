@@ -920,8 +920,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WasapiAudioSource: {fileID: 2087925721}
-  Profile: {fileID: 11400000, guid: d68f5b7faf2f2184dbe22d3d5e5f60d7, type: 2}
-  Strategy: 0
+  Profile: {fileID: 11400000, guid: 1a3c22745757bd34e988d3f0ace67a0a, type: 2}
+  Strategy: 1
   Smoothed: 0
 --- !u!114 &2087925719
 MonoBehaviour:
@@ -965,8 +965,8 @@ MonoBehaviour:
   CaptureType: 0
   SpectrumSize: 512
   ScalingStrategy: 1
-  MinFrequency: 43
-  MaxFrequency: 22050
+  MinFrequency: 100
+  MaxFrequency: 20000
 --- !u!82 &2087925722
 AudioSource:
   m_ObjectHideFlags: 0
@@ -977,7 +977,7 @@ AudioSource:
   m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: f3491550f87631f4fb08343efa71da88, type: 3}
+  m_audioClip: {fileID: 8300000, guid: ea24313d8919d47b48c80acfca55b014, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1

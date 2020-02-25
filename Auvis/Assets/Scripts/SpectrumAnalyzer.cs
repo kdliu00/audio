@@ -78,6 +78,31 @@ public class SpectrumAnalyzer : MonoBehaviour
         
         if (coolbeans) {
             audioSource.GetSpectrumData(samples, 0, FFTWindow.BlackmanHarris);
+
+            float volume = 0;
+            for (int i = 0; i < 512; i++)
+            {
+                samples[i] = Mathf.Pow(256 + i, 1.1f) / 1492 * samples[i];
+                volume += samples[i] * samples[i];
+            }
+            volume = Mathf.Sqrt(volume);
+
+            loudness[loudnessIndex] = volume;
+            loudnessIndex = (loudnessIndex + 1) % loudness.Length;
+
+            volume = Mathf.Max(loudness);
+
+            float t = Time.deltaTime / 10;
+            for (int i = 0; i < 512; i++)
+            {
+                if (samples[i] > volume)
+                {
+                    samples[i] = 1;
+                } else if (volume > 0)
+                {
+                    samples[i] = Mathf.Max(0, 3 + Mathf.Log10(samples[i] / volume)) / 3;
+                }
+            }
         }
 
         // audioSource.GetOutputData(waveform, 0);
@@ -90,31 +115,6 @@ public class SpectrumAnalyzer : MonoBehaviour
         // for (int i = 0; i < 1024; i++)
         // {
         //     energy += waveform[i] * waveform[i];
-        // }
-        
-        // float volume = 0;
-        // for (int i = 0; i < 512; i++)
-        // {
-        //     samples[i] = Mathf.Pow(256 + i, 1.1f) / 1492 * samples[i];
-        //     volume += samples[i] * samples[i];
-        // }
-        // volume = Mathf.Sqrt(volume);
-
-        // loudness[loudnessIndex] = volume;
-        // loudnessIndex = (loudnessIndex + 1) % loudness.Length;
-
-        // volume = Mathf.Max(loudness);
-
-        // float t = Time.deltaTime / 10;
-        // for (int i = 0; i < 512; i++)
-        // {
-        //     if (samples[i] > volume)
-        //     {
-        //         samples[i] = 1;
-        //     } else if (volume > 0)
-        //     {
-        //         samples[i] = Mathf.Max(0, 3 + Mathf.Log10(samples[i] / volume)) / 3;
-        //     }
         // }
 
         GaussianBlur(samples, 5);
