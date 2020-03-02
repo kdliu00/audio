@@ -1,2 +1,2 @@
 # Auvis
-Made with Unity, uses WASAPI through CSCore
+Made with Unity, uses WASAPI through CSCore.
